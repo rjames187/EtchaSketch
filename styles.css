@@ -23,4 +23,5 @@ body {
 .unit {
     margin: 0px;
     padding: 0px;
+    border: solid black;
 }
