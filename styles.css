@@ -8,4 +8,19 @@ body {
     width: 800px;
     height: 800px;
     border: solid black;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.unit {
+    margin: 0px;
+    padding: 0px;
 }
