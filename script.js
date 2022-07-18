@@ -1,20 +1,22 @@
+// grab container DOM node reference
+let container = document.getElementById("container");
+
 // side length of the grid container in pixels
-const GRID_CONTAINER_SIDE_LENGTH = 800;
+const gc_sl = container.clientHeight;
 
 // number of square divs in a row in the grid container
 let numDivs = 16;
 
 // side length of a grid div;
-let sl = GRID_CONTAINER_SIDE_LENGTH / numDivs;
+let sl = gc_sl / numDivs;
 
 // construct grid
-let container = document.getElementById("container");
 
 for (let i = 0; i < numDivs; i++) {
     // construct row with attributes
     const row = document.createElement("div");
     row.classList.add("row");
-    row.style.cssText = `height: ${sl}px; width: ${GRID_CONTAINER_SIDE_LENGTH}px`;
+    row.style.cssText = `height: ${sl}px; width: ${gc_sl}px`;
     
     for (let j = 0; j < numDivs; j++) {
         // construct unit with attributes
