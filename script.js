@@ -21,6 +21,12 @@ for (let i = 0; i < numDivs; i++) {
         const unit = document.createElement("div");
         unit.classList.add("unit");
         unit.style.cssText = `height: ${sl}px; width: ${sl}px`;
+
+        // hover event listener
+        unit.addEventListener('mouseover', () => {
+            unit.classList.add("black-bc");
+        });
+
         row.appendChild(unit);
     }
     
