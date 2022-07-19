@@ -33,7 +33,12 @@ function constructGrid (numDivs, gc_sl, sl) {
 
             // hover event listener
             unit.addEventListener('mouseover', () => {
-                unit.classList.add("black-bc");
+                let color = +getComputedStyle(unit).backgroundColor.match(/(\d+)/)[0];
+                let newColor = color;
+                if (color >= 25.5) {
+                    newColor = color -= 25.5;
+                }
+                unit.style.backgroundColor = `rgb(${color}, ${color}, ${color})`;
             });
 
             row.appendChild(unit);
