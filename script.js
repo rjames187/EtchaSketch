@@ -29,7 +29,7 @@ function constructGrid (numDivs, gc_sl, sl) {
             // construct unit with attributes
             const unit = document.createElement("div");
             unit.classList.add("unit");
-            unit.style.cssText = `height: ${sl}px; width: ${sl}px`;
+            unit.style.cssText = `height: ${sl}px; width: ${sl}px; border-width: ${.0631578947 * sl}px`;
 
             // hover event listener
             unit.addEventListener('mouseover', () => {
