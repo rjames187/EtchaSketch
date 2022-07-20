@@ -59,7 +59,13 @@ function changeGridSize (numDivs) {
 const btn = document.querySelector('button');
 btn.addEventListener('click', () => {
     const numDivs = +prompt("Please enter an integer between 1 and 100");
-    changeGridSize(numDivs);
+    if (numDivs > 100) {
+        alert('The number you have entered is too large.')
+    } else if (numDivs < 1) {
+        alert('The number you have entered is too small.')
+    } else {
+        changeGridSize(numDivs);
+    }
 });
 
 constructGrid(numDivs, gc_sl, sl);
